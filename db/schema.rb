@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140122183405) do
+ActiveRecord::Schema.define(version: 20140122183930) do
 
   create_table "questions", force: true do |t|
     t.text     "query"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20140122183405) do
     t.text     "answer2"
     t.text     "answer3"
     t.text     "answer4"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sessions", force: true do |t|
+    t.string   "name"
+    t.integer  "progress"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
